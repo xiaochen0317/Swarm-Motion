@@ -23,7 +23,7 @@ Dataset
 
 ------
 
-The dataset is a `.txt` file consisting of $T$ rows and $2N$ columns which correspond to frames and all $2D$ positions of agents, respectively.  In this dataset, $T$ is set to 300 and $N$ is randomly ranging from 200 to 800. In the phase of motion prediction, we select 151~160 frames as input and 161~170 frames as output to avoid initial instability. 
+The dataset is a `.txt` file consisting of $T$ rows and $2N$ columns which correspond to frames and all $2D$ positions of agents, respectively.  In this dataset, $T$ is set to 300 and $N$ is randomly ranging from 200 to 800. In the phase of motion prediction, we select 151\~160 frames as input and 161\~170 frames as output to avoid initial instability. 
 
 Additionally, another two `.txt` files are given as the index selection of the dataset partition. In `dataset_partition.txt`, the overall 5,000 samples are divided into training, validation, and testing subsets in a ratio of $85\%:5\%:15\%$. To achieve a small-batched pretesting,  a smaller partitioning containing 100 samples is also achieved, namely `dataser_partition_small.txt`. 
 

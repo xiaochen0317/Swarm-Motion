@@ -33,7 +33,7 @@ In these two `.txt` files, three rows are included, which correspond to the inde
 
 ------
 
-The simulation code is also provided in `data_generation.py`(coming soon). You can obtain your own swarm dataset according to different parameter settings. 
+The simulation code is also provided in `datasetGeneration.py`. You can obtain your own swarm dataset according to different parameter settings. It is worth noting that this code is for generating one sample, you'd better editing another code to generate data sequence according to your requirements.
 
 ### Contact
 

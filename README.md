@@ -6,7 +6,7 @@ A swarm motion simulation dataset is established based on the Boids mathematical
 
 ------
 
-Download all the data [Here](https://drive.google.com/file/d/18uS25E2uvhO3vA6aw9-o4ZGQ9oyVkLZq/view) and put them in the `./Dataset` directory. The overall number of samples is 5,000.
+Download the whole dataset consisting of 300 frames in each sample [Here](https://drive.google.com/file/d/18uS25E2uvhO3vA6aw9-o4ZGQ9oyVkLZq/view) (about 10GB) and put them in the `./Dataset` directory. The overall number of samples is 5,000.
 
 Directory structure:
 

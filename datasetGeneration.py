@@ -33,7 +33,7 @@ def sizeCanvas():
 
 def flyInDirection(boid, speed=0, direction=0, speedNoiseFactor=0., directionNoiseFactor=0.):
     speed_ = speed + np.random.normal(0.0, speedNoiseFactor)
-    direction_ = np.radians(direction + np.random.random() * 360)
+    direction_ = np.radians(direction + np.random.random() * 360 / np.pi)
     boid['x'] += speed_ * np.cos(direction_)
     boid['y'] += speed_ * np.sin(direction_)
 
@@ -135,7 +135,6 @@ def saveData(fileName):
 # def animationLoop(speed=0, direction=45, speednNoiseFactor=0., directionNoiseFactor=0.0, visualRange=40, centeringFactor=0.005, minDistance=20, avoidFactor = 0.05, matchingFactor = 0.05, speedLimit=15, margin=200, turnFactor=1, isBounded=True, draw=True):
 #     global boids
 #     for boid in boids:
-#         # TODO: 按照指定轨迹运动？
 #         # flyInDirection(boid, speed, direction, speednNoiseFactor, directionNoiseFactor)
 #         flyTowardsCenter(boid, visualRange, centeringFactor)
 #         avoidOthers(boid, minDistance, avoidFactor)
@@ -165,7 +164,6 @@ def animationLoop(speed=0, direction=45, speedNoiseFactor=0., directionNoiseFact
     global boids
     tempBoids = boids.copy()
     for i, boid in enumerate(boids):
-        # TODO: 按照指定轨迹运动？
         flyInDirection(tempBoids[i], speed, direction, speedNoiseFactor, directionNoiseFactor)
         flyTowardsCenter(tempBoids[i], visualRange, centeringFactor)
         avoidOthers(tempBoids[i], minDistance, avoidFactor)
@@ -175,7 +173,7 @@ def animationLoop(speed=0, direction=45, speedNoiseFactor=0., directionNoiseFact
         tempBoids[i]['x'] += tempBoids[i]['dx']
         tempBoids[i]['y'] += tempBoids[i]['dy']
         tempBoids[i]['history'].append((tempBoids[i]['x'], tempBoids[i]['y']))
-    boids = tempBoids  # 将临时的智能体列表赋值回原始的智能体列表
+    boids = tempBoids
 
     if draw:
         plt.clf()
